@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+"""Pascal's Triangle module."""
+
 def pascal_triangle(n):
     if n <= 0:
         return []
