@@ -5,7 +5,7 @@
 
 def minOperations(n):
     """calculates the fewest number of operations needed to result"""
-    if n is None or n <= 1:
+    if n <= 1:
         return 0
     operations = 0
     for i in range(2, n + 1):
