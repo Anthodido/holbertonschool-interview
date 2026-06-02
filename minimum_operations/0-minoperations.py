@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 """method that calculates the fewest number of operations needed to result"""
 
@@ -12,16 +12,9 @@ def minOperations(n):
     """
     if n <= 1:
         return 0
-
     operations = 0
-    current_length = 1
-
-    while current_length < n:
-        if n % current_length == 0:
-            operations += 1
-            current_length *= 2
-        else:
-            operations += 1
-            current_length += 1
-
+    for i in range(2, n + 1):
+        while n % i == 0:
+            operations += i
+            n //= i
     return operations
